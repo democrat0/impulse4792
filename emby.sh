@@ -14,7 +14,7 @@ docker rm -f nginx-emby-rm
 if [ -f "$exportPath/constant.js" ]; then
     sed -i "s|http://172.17.0.1:8096|$embyHost|g" "$exportPath/constant.js"
     sed -i "s|f839390f50a648fd92108bc11ca6730a|$embytoken|g" "$exportPath/constant.js"
-    sed -i "s|\"/mnt\"|$plexMountPath|g" "$exportPath/constant.js"
+    sed -i "s|\"/mnt\"|$embyMountPath|g" "$exportPath/constant.js"
     echo "constant.js 文件已更新"
 else
     echo "constant.js 文件不存在"
