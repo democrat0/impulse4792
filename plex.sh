@@ -6,6 +6,7 @@ read -p '请输入alist地址，按括号格式内格式输入（http://127.0.0.
 read -p '请输入alist Token，按括号格式内格式输入（alist-Token）: ' alistToken
 read -p '请输入alist外网地址，按括号格式内格式输入（https://abc.com:443）: ' alistPublicAddr
 mkdir -p "$exportPath"
+docker pull mnookey/nginx-plex:latest
 docker run -d --name nginx-plex-rm mnookey/nginx-plex
 docker cp nginx-plex-rm:/etc/nginx/conf.d/constant.js "$exportPath/constant.js"
 docker cp nginx-plex-rm:/etc/nginx/conf.d/config/constant-mount.js "$exportPath/constant-mount.js"
