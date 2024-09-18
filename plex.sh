@@ -7,6 +7,8 @@ read -p '请输入CloudDrive2挂载目录，按括号格式内格式输入（"/C
 read -p '请输入alist地址，按括号格式内格式输入（http://127.0.0.1:5244）: ' alistAddr
 read -p '请输入alist Token，按括号格式内格式输入（alist-Token）: ' alistToken
 read -p '请输入alist外网地址，按括号格式内格式输入（https://abc.com:443）: ' alistPublicAddr
+read -p '请输入alist是否启用了sign签名，按括号格式内格式输入（默认false）: ' alistSignEnable
+read -p '请输入alist缓存时间，按括号格式内格式输入（默认12小时）: ' alistSignExpireTime
 # 询问是否更改端口
 read -p '是否更改端口? (y/n): ' changePort
 
